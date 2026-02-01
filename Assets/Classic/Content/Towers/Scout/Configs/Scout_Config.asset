@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83072bd253483d0418afb29d2a6b1927, type: 3}
+  m_Name: Scout_Config
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.Tower.Config
+  <Id>k__BackingField: classic.tower.scout
+  <Translations>k__BackingField:
+  - Scout
+  - "\u0421\u043A\u0430\u0443\u0442"
+  <Preview>k__BackingField: {fileID: 11400000, guid: f363a9d0d0722984d92b47a6c3bd2673, type: 2}
+  <AllowedPlatforms>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 1
+  <MaxPlacementCount>k__BackingField: 1
+  <Bullet>k__BackingField: {fileID: 11400000, guid: 8b92134c724e1df4db9f279e52b2abea, type: 2}
+  <Levels>k__BackingField:
+  - {fileID: 11400000, guid: a01430ef4b67582419226729461104f2, type: 2}
