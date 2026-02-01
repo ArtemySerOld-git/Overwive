@@ -13,7 +13,7 @@ namespace Overwave.Classic.Enemy
         [field: Header("Base Stats"), SerializeField]
         public int Health { get; private set; }
         [field: SerializeField]
-        public int Speed { get; private set; }
+        public float Speed { get; private set; }
         [field: SerializeField]
         public float RotationSpeed { get; private set; }
         

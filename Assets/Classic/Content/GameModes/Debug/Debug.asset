@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379b11c682b247f29e0df469254045f1, type: 3}
-  m_Name: Fallen
+  m_Name: Debug
   m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.GameMode.GameModeConfig
-  <Id>k__BackingField: classic.gamemode.fallen
+  <Id>k__BackingField: classic.gamemode.debug
   <Translations>k__BackingField: []
   <CoinsReward>k__BackingField: 0
   <GemsReward>k__BackingField: 0
   <XpReward>k__BackingField: 0
   <StartCash>k__BackingField: 0
-  <Structure>k__BackingField: []
+  <Structure>k__BackingField:
+  - {fileID: 11400000, guid: 84b94c99cb5c26a4e85abd8ead8f27a7, type: 2}
+  - {fileID: 11400000, guid: d082cedef0d402047ab24794aa87b901, type: 2}
+  - {fileID: 11400000, guid: 80c66fa246856034e99638b7f7bcc1eb, type: 2}
+  - {fileID: 0}
