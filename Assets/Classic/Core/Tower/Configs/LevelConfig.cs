@@ -8,13 +8,16 @@ namespace Overwave.Classic.Tower
     public class LevelConfig : BaseConfig
     {
         [field: SerializeReference]
-        public List<Component> Components { get; private set; }
+        public List<Component> Components { get; internal set; }
             
         [field: SerializeField]
-        public GameObject Prefab { get; private set; }
+        public GameObject Prefab { get; internal set; }
             
         [field: SerializeField]
-        public int Cost { get; private set; }
+        public int Cost { get; internal set; }
+        
+        [field: SerializeField]
+        public LevelConfig Next { get; internal set; }
 
         public override Object Value => Prefab;
 

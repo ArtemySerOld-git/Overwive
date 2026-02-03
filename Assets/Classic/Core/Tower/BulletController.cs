@@ -1,9 +1,11 @@
 ﻿using System.Collections;
+using Overwave.Classic.Tower.Components;
 using Overwave.Classic.Utils;
 using UnityEngine;
 
 namespace Overwave.Classic.Tower
 {
+    [DisallowMultipleComponent, RequireComponent(typeof(SphereCollider))]
     public class BulletController : MonoBehaviour, IPoolable
     {
         [field: SerializeField]
@@ -14,6 +16,8 @@ namespace Overwave.Classic.Tower
         
         [field: SerializeField]
         public Enemy.Behavior Target { get; private set; }
+        
+        private RangeModifier _rangeComponent;
 
         private int _currentIndex;
         
@@ -30,8 +34,17 @@ namespace Overwave.Classic.Tower
             Tower = tower;
             Target = target;
             
+            _rangeComponent = (RangeModifier)Tower.Config.TryGetComponent(ComponentType.RangeModifier);
+            if (_rangeComponent == null)
+            {
+                Debug.LogError($"Cannot get Range Component in tower {Tower}");
+                Destroy();
+            }
+            
             StartCoroutine(Lifecycle());
         }
+
+        public override string ToString() => Config.Id;
 
         private void Update()
         {
@@ -48,7 +61,7 @@ namespace Overwave.Classic.Tower
         {
             transform.position = Vector3.MoveTowards(transform.position, Target.transform.position,
                 Config.Speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, Tower.transform.position) > (Tower.CurrentRange + 4) / 2)
+            if (Vector3.Distance(transform.position, Tower.transform.position) > (_rangeComponent.CurrentRange + 4) / 2)
                 Destroy();
         }
 

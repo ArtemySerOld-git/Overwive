@@ -11,12 +11,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad568e3a0702430087d536e3afda8f9d, type: 3}
   m_Name: Database
-  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.Utils.AssetDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Assets.Database
   configs:
-  - {fileID: 11400000, guid: e87b01c2bece90e458409ba32a2faf66, type: 2}
-  - {fileID: 11400000, guid: 3406c50f80ec1d042a69bf646c4ce2c6, type: 2}
-  - {fileID: 11400000, guid: b0e86fcaa94e5ba4ebf4d9364c305dce, type: 2}
-  - {fileID: 11400000, guid: 8b92134c724e1df4db9f279e52b2abea, type: 2}
-  - {fileID: 11400000, guid: a23ebb1c6564ddb49b9052bbc88b93b2, type: 2}
-  - {fileID: 11400000, guid: a01430ef4b67582419226729461104f2, type: 2}
-  - {fileID: 11400000, guid: f363a9d0d0722984d92b47a6c3bd2673, type: 2}
+  - {fileID: 11400000, guid: cfca7c01bc1ffc448b7de5961d1d4b33, type: 2}
+  - {fileID: 11400000, guid: 780ade60d8541b44f83e152af43a0668, type: 2}
+  - {fileID: 11400000, guid: d69a0bdacfcaf3f4f802fc91b4122f18, type: 2}
+  - {fileID: 11400000, guid: e19821b58949eed4bb874d7a0ac4ea4c, type: 2}
+  - {fileID: 11400000, guid: d3e8214cff9eb2d4bb4841179df00260, type: 2}
+  - {fileID: 11400000, guid: ba8088bfd3874814a9407c826f16909e, type: 2}
+  - {fileID: 11400000, guid: 9f69647f110bf2e4e9738119e2f0a55b, type: 2}
+  - {fileID: 11400000, guid: 0caee734d50c9484780af802b2cb49f7, type: 2}
+  - {fileID: 11400000, guid: 75a46b35f3201e2408c22139502dd70c, type: 2}
+  - {fileID: 11400000, guid: 242f1010d42f19e43834263630a34c78, type: 2}
+  - {fileID: 11400000, guid: 95063f5d738fcae4eaf40825dc99b84f, type: 2}

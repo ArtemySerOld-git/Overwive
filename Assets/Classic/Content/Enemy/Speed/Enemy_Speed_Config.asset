@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb318e09fc9447bb8d9d94340dd9f72, type: 3}
+  m_Name: Enemy_Speed_Config
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.Enemy.Config
+  <Id>k__BackingField: classic.enemy.speed
+  <Translations>k__BackingField:
+    english: 
+    russian: 
+    french: 
+    german: 
+    chinese: 
+  <Prefab>k__BackingField: {fileID: 6623786280452462322, guid: f018636d009185c40aa2311096db8d67, type: 3}
+  <Speed>k__BackingField: 2
+  <RotationSpeed>k__BackingField: 2
+  <Health>k__BackingField: 12
+  <Components>k__BackingField: []
+  <AnimationsCount>k__BackingField: 3
+  <ClassType>k__BackingField: 17
+  references:
+    version: 2
+    RefIds: []

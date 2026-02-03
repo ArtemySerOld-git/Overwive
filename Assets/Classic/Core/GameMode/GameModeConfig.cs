@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [assembly: InternalsVisibleTo("Assembly-CSharp-Editor")]
@@ -16,9 +17,8 @@ namespace Overwave.Classic.GameMode
         public ushort XpReward { get; internal set; }
         [field: SerializeField]
         public int StartCash { get; internal set; }
-        
-        [field: Space, SerializeField]
-        public WaveConfig[] Structure { get; internal set; }
+
+        [field: Space, SerializeField] public List<WaveConfig> Structure { get; internal set; } = new();
 
         public override Object Value => this;
     }

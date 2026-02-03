@@ -15,6 +15,8 @@ namespace Overwave.Classic.Utils
         
         [Header("Scripts")]
         public PointMarker pointMarker;
+
+        [SerializeField] private Tower.Config _testTower;
         
         public static MainManager Instance { get; private set; }
 
@@ -33,7 +35,7 @@ namespace Overwave.Classic.Utils
             Assets.Manager.LoadResources();
             Translation.Initialize(new[] { "ru", "en", "fr", "ge", "ch" });
             
-            GameObjectPool.LoadTower("classic.tower.scout");
+            GameObjectPool.LoadTower(_testTower);
         }
     }
 }

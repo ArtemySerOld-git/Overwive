@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Overwave.Classic.Tower
 {
+    [DisallowMultipleComponent, RequireComponent(typeof(Animator)), RequireComponent(typeof(BoxCollider))]
     public class Behavior : MonoBehaviour, IPoolable
     {
         [field: SerializeField]
@@ -19,40 +20,41 @@ namespace Overwave.Classic.Tower
         public TargetPriority Priority { get; private set; }
         
         [field: SerializeField]
-        public float CurrentRange { get; private set; }
+        public Animator Animator { get; private set; }
         
         public List<Enemy.Behavior> enemies = new();
 
         public bool Deleted { get; set; }
         
         public void Damage(Enemy.Behavior target)
-            => CallComponentsIfActive(c => c.DamageEnemy(target));
+            => CallIfActive(c => c.DamageEnemy(target));
 
         public void Fire(Enemy.Behavior target)
         {
             var bullet = GameObjectPool.Summon(TowerConfig.Bullet.Id, transform);
             bullet.GetComponent<BulletController>().Init(this, target);
             
-            CallComponentsIfActive(c => c.OnFire());
+            CallIfActive(c => c.OnFire());
         }
 
-        private void Awake()
+        private void Start()
         {
-            Config = Instantiate(Config);
-
-            Config.Components.ForEach(comp => comp.Tower = this);
+            Animator = GetComponent<Animator>();
             
-            CallComponentsIfActive(c => c.Initialize());
+            Config = Instantiate(Config);
+            Config.Components.ForEach(comp => { comp.Tower = this; comp.Initialize(); });
         }
 
         public void OnSummon()
         {
-            CallComponentsIfActive(c => c.Start());
+            CallIfActive(c => c.Start());
         }
+
+        public override string ToString() => Config.Id;
 
         private void Update()
         {
-            CallComponentsIfActive(c => c.Update());
+            CallIfActive(c => c.Update());
         }
 
         public Enemy.Behavior GetPriorityTarget()
@@ -193,9 +195,10 @@ namespace Overwave.Classic.Tower
             return Random.Range(0, enemies.Count);
         }
 
-        private void CallComponentsIfActive(Action<Component> action)
-        {
-            Config.Components.ForEach(c => { if (c.active) action(c); });
-        }
+        private void CallIfActive(Action<Component> action)
+            => Config.Components.ForEach(c => { if (c.active) action(c); });
+        
+        private bool AllIfActive(Func<Component, bool> action)
+            => Config.Components.All(component => component.active && action(component));
     }
 }

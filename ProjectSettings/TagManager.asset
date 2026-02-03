@@ -9,6 +9,7 @@ TagManager:
   - Start Portal
   - End Portal
   - Road
+  - Tower
   layers:
   - Default
   - TransparentFX

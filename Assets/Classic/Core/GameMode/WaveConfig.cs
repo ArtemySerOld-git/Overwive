@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+
+[assembly: InternalsVisibleTo("Assembly-CSharp-Editor")]
 
 namespace Overwave.Classic.GameMode
 {
@@ -6,13 +10,10 @@ namespace Overwave.Classic.GameMode
     public class WaveConfig : ScriptableObject
     {
         [field: Tooltip("If value smaller 0, wave is infinity"), SerializeField]
-        public int WaveTime { get; private set; }
-        [field: SerializeField]
-        public ushort SkipTime { get; private set; }
-        [field: SerializeField]
-        public ushort CashAfterWave { get; private set; }
-        
-        [field: Space, SerializeField]
-        public MiniWaveConfig[] Structure { get; private set; }
+        public int WaveTime { get; internal set; } = 60;
+        [field: SerializeField] public ushort SkipTime { get; internal set; } = 20;
+        [field: SerializeField] public ushort CashAfterWave { get; internal set; }
+
+        [field: Space, SerializeField] public List<EnemyWaveConfig> Structure { get; internal set; } = new();
     }
 }

@@ -16,7 +16,7 @@ namespace Overwave.Classic.Tower
         
         public virtual void Start() { }
 
-        public virtual void Update() { Debug.Log("Hello World!"); }
+        public virtual void Update() { }
         
         public virtual void DamageEnemy(Enemy.Behavior target) { }
         

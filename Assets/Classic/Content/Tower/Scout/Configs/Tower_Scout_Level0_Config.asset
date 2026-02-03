@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a9fd4437174e3c8f7c9f13ed06ff59, type: 3}
+  m_Name: Tower_Scout_Level0_Config
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.Tower.LevelConfig
+  <Id>k__BackingField: classic.tower.scout.level0
+  <Translations>k__BackingField:
+    english: 
+    russian: 
+    french: 
+    german: 
+    chinese: 
+  <Components>k__BackingField:
+  - rid: 4597598057309667328
+  - rid: 4597598057309667392
+  <Prefab>k__BackingField: {fileID: 4344310426998947537, guid: ce58a25254a0a1d4990e4d12e332edc2, type: 3}
+  <Cost>k__BackingField: 200
+  <Next>k__BackingField: {fileID: 11400000, guid: 0caee734d50c9484780af802b2cb49f7, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4597598057309667328
+      type: {class: Attack, ns: Overwave.Classic.Tower.Components, asm: Assembly-CSharp}
+      data:
+        active: 1
+        <Damage>k__BackingField: 1
+        <FireRate>k__BackingField: 12
+    - rid: 4597598057309667392
+      type: {class: RangeModifier, ns: Overwave.Classic.Tower.Components, asm: Assembly-CSharp}
+      data:
+        active: 1
+        <Range>k__BackingField: 10

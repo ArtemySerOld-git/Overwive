@@ -49,7 +49,7 @@ namespace Overwave.Classic.GameMode
                 yield return new WaitForSeconds(1);
             }
 
-            for (var i = 0; i < _config.Structure.Length; i++)
+            for (var i = 0; i < _config.Structure.Count; i++)
             {
                 WaveEnd = false;
 
@@ -57,7 +57,7 @@ namespace Overwave.Classic.GameMode
                 foreach (var config in wave.Structure)
                 {
                     var obj = Instantiate(_miniWavePrefab);
-                    var manager = obj.GetComponent<MiniWaveManager>();
+                    var manager = obj.GetComponent<EnemyWaveManager>();
                     
                     _wavesEnd.Add(obj);
                     manager.End += () => _wavesEnd.Remove(obj);

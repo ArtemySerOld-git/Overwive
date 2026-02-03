@@ -10,7 +10,7 @@ namespace Overwave
         [field: SerializeField]
         public string Id { get; internal set; }
         [field: SerializeField]
-        public string[] Translations { get; internal set; }
+        public Utils.TranslationData Translations { get; internal set; }
         
         public abstract Object Value { get; }
     }

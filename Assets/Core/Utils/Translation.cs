@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Overwave.Utils
@@ -9,14 +8,14 @@ namespace Overwave.Utils
         private static int _currentLanguage;
         public static string[] Languages { get; private set; }
         
-        public static Dictionary<string, string[]> Database { get; private set; }
+        public static Dictionary<string, TranslationData> Database { get; private set; }
 
         public static void Initialize(string[] languages)
         {
             Languages = languages;
             
             var db = Resources.Load<Assets.Database>("Database");
-            Database = new Dictionary<string, string[]>();
+            Database = new Dictionary<string, TranslationData>();
 
             foreach (var config in db.configs)
             {

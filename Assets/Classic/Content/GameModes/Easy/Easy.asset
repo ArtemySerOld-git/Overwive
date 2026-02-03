@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.GameMode.GameModeConfig
   <Id>k__BackingField: classic.gamemode.easy
   <Translations>k__BackingField:
-  - Easy
-  - "\u041B\u0451\u0433\u043A\u0438\u0439"
-  <CoinsReward>k__BackingField: 300
+    english: 
+    russian: 
+    french: 
+    german: 
+    chinese: 
+  <CoinsReward>k__BackingField: 0
   <GemsReward>k__BackingField: 0
-  <XpReward>k__BackingField: 50
-  <StartCash>k__BackingField: 600
+  <XpReward>k__BackingField: 0
+  <StartCash>k__BackingField: 0
   <Structure>k__BackingField:
-  - {fileID: 11400000, guid: 936f43bd34aa6e04ab525dd704214a04, type: 2}
-  - {fileID: 11400000, guid: 691403d31cb4bae488830983640bfc2b, type: 2}
+  - {fileID: 11400000, guid: 87160c2f9b104a449bc639820956488f, type: 2}
+  - {fileID: 11400000, guid: 8db4666dca07aaf499dfeec9aebe3044, type: 2}
+  - {fileID: 11400000, guid: d5e67c647746dbf43945a37ade3acf75, type: 2}

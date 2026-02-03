@@ -7,6 +7,7 @@
         Ammo,
         SeeHidden,
         SeeFly,
-        CanDamageLead
+        CanDamageLead,
+        RangeModifier
     }
 }

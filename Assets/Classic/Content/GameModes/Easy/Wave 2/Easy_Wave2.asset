@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a17058d184d4f1a8ba0bf7131ec75ef, type: 3}
+  m_Name: Easy_Wave2
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.GameMode.WaveConfig
+  <WaveTime>k__BackingField: 60
+  <SkipTime>k__BackingField: 20
+  <CashAfterWave>k__BackingField: 0
+  <Structure>k__BackingField:
+  - {fileID: 11400000, guid: 1b303f2eabdd63a40bf19252ba166f37, type: 2}
+  - {fileID: 11400000, guid: fd730419d7220b143a0361ad5dbc6a3d, type: 2}
+  - {fileID: 11400000, guid: 49dd8ad949466ac44ad5ebfec3e6cf98, type: 2}

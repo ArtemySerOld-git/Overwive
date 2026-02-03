@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3498028628489339776
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.418767
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000023982557
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.154395
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_Name
+      value: Tower_Scout_Level0_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 169e8662ef0fa7a44b73034427a642f0, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5680294001021751065}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5587753012431619070}
+  m_SourcePrefab: {fileID: 100100000, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+--- !u!1 &4344310426998947537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e6274f8f0378d441851229b52e1cff2, type: 3}
+  m_PrefabInstance: {fileID: 3498028628489339776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5680294001021751065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344310426998947537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.56136274, y: 1.5364438, z: 0.40479946}
+  m_Center: {x: -0.12030101, y: 0.5943487, z: 0.10274458}
+--- !u!114 &-5587753012431619070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344310426998947537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18619fa3ffcf44bbbcd8a6a5e06eef5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Overwave.Classic.Tower.Behavior
+  <TowerConfig>k__BackingField: {fileID: 11400000, guid: ba8088bfd3874814a9407c826f16909e, type: 2}
+  <Config>k__BackingField: {fileID: 11400000, guid: 9f69647f110bf2e4e9738119e2f0a55b, type: 2}
+  <Priority>k__BackingField: 0
+  <CurrentRange>k__BackingField: 0
+  <Animator>k__BackingField: {fileID: 0}
+  enemies: []

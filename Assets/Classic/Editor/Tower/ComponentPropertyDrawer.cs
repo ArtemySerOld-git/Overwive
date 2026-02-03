@@ -59,6 +59,7 @@ namespace Overwave.Classic.Editor.Tower
                 ComponentType.SeeHidden => new Components.SeeHidden(),
                 ComponentType.SeeFly => new Components.SeeFly(),
                 ComponentType.CanDamageLead => new Components.CanDamageLead(),
+                ComponentType.RangeModifier => new Components.RangeModifier(),
                 _ => null
             };
         }

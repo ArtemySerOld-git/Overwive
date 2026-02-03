@@ -6,10 +6,13 @@ using UnityEngine;
 
 namespace Overwave.Classic.Enemy
 {
+    [DisallowMultipleComponent, RequireComponent(typeof(Animator)), RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(BoxCollider))]
     public class Behavior : MonoBehaviour, IPoolable
     {
+        private static readonly int SpeedMultiplier = Animator.StringToHash("SpeedMultiplier");
         private int _currentPointIndex;
         private float _totalPathLength;
+        private Animator _animator;
         
         [field: SerializeField]
         public Config Config { get; private set; }
@@ -25,13 +28,24 @@ namespace Overwave.Classic.Enemy
                     GameObjectPool.Delete(gameObject, Config.Id);
             }
         }
-        
-        public bool Deleted { get; set; }
-        
+
+        [SerializeField] private float _currentSpeed;
+        public float CurrentSpeed
+        {
+            get => _currentSpeed;
+            set
+            {
+                _currentSpeed = value;
+                _animator.SetFloat(SpeedMultiplier, value);
+            }
+        }
+
         [field: SerializeField]
         public float PathProgress { get; private set; }
         
         public GameObject[] Points { get; private set; }
+        
+        public bool Deleted { get; set; }
 
         public bool CanAddToTower(Tower.Behavior tower)
             => AllIfActive(c => c.CanAddToTower(tower));
@@ -52,7 +66,13 @@ namespace Overwave.Classic.Enemy
 
             InitializePathProgress();
             
-            CallComponentsIfActive(c => c.Start());
+            CallIfActive(c => c.Start());
+        }
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+            CurrentSpeed = Config.Speed;
         }
 
         private void Update()
@@ -60,7 +80,7 @@ namespace Overwave.Classic.Enemy
             Move();
             UpdateProgress();
 
-            CallComponentsIfActive(c => c.Update());
+            CallIfActive(c => c.Update());
         }
 
         private void Move()
@@ -146,7 +166,7 @@ namespace Overwave.Classic.Enemy
             PathProgress = (traveledToCurrent + currentSegmentDistance) / _totalPathLength; 
         }
 
-        private void CallComponentsIfActive(Action<Component> action)
+        private void CallIfActive(Action<Component> action)
         {
             Config.Components.ForEach(component => { if (component.active) action(component); });
         }

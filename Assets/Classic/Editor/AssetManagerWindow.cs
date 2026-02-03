@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,17 +8,12 @@ namespace Overwave.Classic.Editor
     public class AssetManagerWindow : EditorWindow
     {
         [MenuItem("Tools/Overwave/Build Database")]
-        private static void BuildConfigDatabase()
+        public static void BuildConfigDatabase()
         {
-            List<BaseConfig> configs = new();
             var guids = AssetDatabase.FindAssets("t:BaseConfig", new[] { "Assets" });
 
-            foreach (var guid in guids)
-            {
-                var path = AssetDatabase.GUIDToAssetPath(guid);
-                BaseConfig config = AssetDatabase.LoadAssetAtPath<BaseConfig>(path);
-                if (config) configs.Add(config);
-            }
+            var configs = guids.Select(AssetDatabase.GUIDToAssetPath)
+                .Select(AssetDatabase.LoadAssetAtPath<BaseConfig>).Where(config => config).ToList();
             Debug.Log($"Found {configs.Count} configs");
             
             var db = CreateInstance<Assets.Database>();
